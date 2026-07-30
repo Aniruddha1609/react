@@ -1,9 +1,11 @@
 import Home from "./Home";
 
 function App() {
+  const username = "aniruddha";
+
   return (
     <>
-      <h1>React App</h1>
+      <h1>React App {username}</h1>
       <Home />
     </>
   );
