@@ -39,6 +39,7 @@ function App() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              e.stopPropagation();
               convert();
             }}
           >
