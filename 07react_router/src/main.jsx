@@ -5,6 +5,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Contact from "./components/contact/contact";
+import Github, { getGithubUserInfo } from "./components/github/Github";
 import { createRoot } from "react-dom/client";
 import About from "./components/about/About";
 import Home from "./components/home/Home";
@@ -42,6 +43,11 @@ const router = createBrowserRouter(
       <Route path="contact-us" element={<Contact />} />
       <Route path="contact-us" element={<Contact />} />
       <Route path="user/:id" element={<User />} />
+      <Route
+        loader={getGithubUserInfo}
+        path="github"
+        element={<Github />}
+      />
     </Route>,
   ),
 );
