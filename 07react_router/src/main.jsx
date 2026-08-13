@@ -9,7 +9,7 @@ import Github, { getGithubUserInfo } from "./components/github/Github";
 import { createRoot } from "react-dom/client";
 import About from "./components/about/About";
 import Home from "./components/home/Home";
-import User from "./components/user/user";
+import User from "./components/user/User";
 import { StrictMode } from "react";
 import Layout from "./Layout";
 import "./index.css";
