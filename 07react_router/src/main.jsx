@@ -4,8 +4,8 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Contact from "./components/contact/contact";
 import Github, { getGithubUserInfo } from "./components/github/Github";
+import Contact from "./components/contact/contact";
 import { createRoot } from "react-dom/client";
 import About from "./components/about/About";
 import Home from "./components/home/Home";
