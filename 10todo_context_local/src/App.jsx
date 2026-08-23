@@ -1,6 +1,8 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { TodoProvider } from "./contexts";
+import TodoForm from "./components/TodoForm";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -9,7 +11,7 @@ function App() {
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...todos]);
   };
 
-  const updateTodo = (todo, id) => {
+  const updateTodo = (id, todo) => {
     setTodos((prev) =>
       prev.map((prevTodo) => prevTodo.id === id ? todo : prevTodo)
     );
@@ -32,7 +34,7 @@ function App() {
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"));
 
-    if (!todos && todos.length > 0) {
+    if (todos && todos.length > 0) {
       setTodos(todos);
     }
   }, []);
@@ -52,9 +54,15 @@ function App() {
           </h1>
           <div className="mb-4">
             {/* Todo form goes here */}
+            <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
             {/*Loop and Add TodoItem here */}
+            {todos.map((todo) => (
+              <div key={todo.id} className="w-full">
+                <TodoItem todo={todo} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
