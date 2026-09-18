@@ -21,13 +21,12 @@ export const todoSlice = createSlice({
                 todo.id !== action.payload
             );
         },
-        // updateTodo: (state, action) => {
-        //     state.todos = state.todos.map((todo) =>
-        //         todo.id === action.payload
-        //             ? { ...todo, text: action.payload }
-        //             : todo
-        //     );
-        // },
+        updateTodo: (state, action) => {
+            const { id, text } = action.payload;
+            state.todos = state.todos.map((todo) =>
+                todo.id === id ? { ...todo, text } : todo
+            );
+        },
     },
 });
 
