@@ -5,7 +5,7 @@ import Todos from "./components/Todos";
 function App() {
   return (
     <>
-      <AddTodo></AddTodo>
+     
       <Todos></Todos>
     </>
   );
