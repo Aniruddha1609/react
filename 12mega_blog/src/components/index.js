@@ -7,6 +7,7 @@ import Button from "./Button";
 import Select from "./Select";
 import Postcard from "./Postcard";
 import Input from "./Input";
+import RTE from "./RTE";
 
 export {
     Button,
@@ -17,5 +18,6 @@ export {
     Logo,
     LogoutBtn,
     Postcard,
+    RTE,
     Select,
 };
