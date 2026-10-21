@@ -6,8 +6,6 @@ export const Contextprovider = ({ children }) => {
     const [pokeData, setPokeData] = useState({});
     const [pokemonList, setPokemonList] = useState([]);
     const [pokeId, setPokeId] = useState(1);
-    const [leftEnd, setLeftEnd] = useState(-4);
-    const [pokeChunk, setPokeChunk] = useState([]);
 
     return (
         <context.Provider
@@ -20,10 +18,6 @@ export const Contextprovider = ({ children }) => {
                 setPokeId,
                 pokemonList,
                 setPokemonList,
-                leftEnd,
-                setLeftEnd,
-                pokeChunk,
-                setPokeChunk,
             }}
         >
             {children}
