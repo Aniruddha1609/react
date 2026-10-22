@@ -1,17 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Card from "./Card";
-import context from "../context/context";
 
 function Cardbox({ pokeChunk }) {
-    // const { leftEnd, setLeftEnd } = useContext(context);
-
-    // useEffect(() => {
-    //     setLeftEnd(leftEnd + 4);
-    // }, []);
-
-    // let pokeChunk = pokemonList.slice(leftEnd, leftEnd + 4);
     return (
-        <div className="flex justify-evenly">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center w-full max-w-7xl mx-auto px-4 my-6">
             {pokeChunk.map((pokemonData) => (
                 <Card
                     key={pokemonData.name}

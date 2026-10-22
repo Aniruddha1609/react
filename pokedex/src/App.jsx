@@ -43,40 +43,36 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-700">
-      <div className="min-h-auto my-2.2 bg-gray-950 flex justify-center pb-1 mb-4">
+    <div className="bg-gray-700 min-h-screen pb-10">
+      <div className="bg-gray-950 flex flex-wrap justify-center items-center gap-4 py-4 px-4 mb-4 shadow-md">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQITz8nRCWavl9QQPcajY0t_U-IV86CE5tMkOMZ3zFAXg&s=10"
           alt="pokedex"
-          height={100}
-          width={250}
-          className="ml-6 py-10 rounded-2xlsm"
+          className="h-16 sm:h-20 w-auto object-contain rounded-xl"
         />
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ25BT2vL7cPHfMoyMgAJtGT5z3ileZf7ts9MK8aDcqjw&s=10"
           alt="pokedex"
-          height={100}
-          width={200}
-          className="py-10 rounded-2xlsm"
+          className="h-16 sm:h-20 w-auto object-contain rounded-xl"
         />
       </div>
-      <div>
+      <div className="max-w-7xl mx-auto px-2 sm:px-4">
         {chunks.map((pokeChunk, index) => (
           <Cardbox key={index} pokeChunk={pokeChunk} />
         ))}
       </div>
-      <div className="flex justify-center">
+      <div className="flex flex-wrap justify-center items-center gap-3 my-8 px-4">
         {prevPageLink && (
           <div className="flex gap-2 justify-evenly">
             <button
-              className="bg-blue-500 h-xs min-w-auto rounded-lg my-5 p-2 cen text-amber-50"
+              className="bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-lg py-2 px-4 text-amber-50 shadow"
               onClick={handleBeginning}
             >
               Beginning
             </button>
 
             <button
-              className="bg-blue-500 h-xs min-w-auto rounded-lg my-5 mx-2 p-2 cen text-amber-50"
+              className="bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-lg py-2 px-4 text-amber-50 shadow"
               onClick={handlePrevPage}
             >
               Prev
@@ -85,7 +81,7 @@ function App() {
         )}
 
         <button
-          className="bg-blue-500 h-xs min-w-auto rounded-lg my-5 p-2 cen text-amber-50"
+          className="bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all rounded-lg py-2 px-4 text-amber-50 shadow"
           onClick={handleNextPage}
         >
           Next
