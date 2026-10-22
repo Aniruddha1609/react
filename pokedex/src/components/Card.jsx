@@ -18,9 +18,8 @@ function Card({ pokeUrl }) {
     const pokeId = match ? match[1] : "";
 
     return (
-        <div className="w-full max-w-[280px] sm:max-w-xs p-4 font-sans bg-gray-200 mx-auto my-4 sm:my-6 border-2 border-gray-800 rounded-lg flex flex-col justify-between shadow-md">
+        <div className="w-full max-w-[280px] sm:max-w-xs p-4 font-sans bg-gray-400 mx-auto my-4 sm:my-6 border-2 border-gray-800 rounded-lg flex flex-col justify-between shadow-md">
             <div>
-                {/* Fixed height container for uniform image sizing */}
                 <div className="bg-gray-100 rounded-xl h-36 sm:h-40 p-4 flex items-center justify-center mb-3 overflow-hidden">
                     <img
                         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`}
